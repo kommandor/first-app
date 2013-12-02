@@ -1,0 +1,34 @@
+Algorithm of train movement
+
+This part work only once
+
+
+Take the direction of turning "left" or "right"
+if "left" place the center of turning on the point (x+sin(angle),y-cos(angle))
+if "right" place the center of turning on the point (x-sin(angle),y+cos(angle))
+
+This part repeats every frame
+
+Take the movement direction "right", "left", or "straight" (now equal to 2,1 and 0)
+
+if "straight" and turning direction "left" move the train at the point (x+cos(angle),y+sin(angle))
+if "straight" and turning direction "right" move the train at the point (x-cos(angle),y-sin(angle))
+move the center so as the train/
+
+if "left" and turning direction "left"
+	move the train at the point (center.x+cos(angle),center.y+sin(angle))
+	angle+=pi/2
+if "left" and turning direction "right"
+	move the center of turning at the point (train.x+sin(angle),train.y-cos(angle))
+	move the train at the point (train.x-cos(angle),center.y-sin(angle))
+	angle-=pi/2
+
+if "right" and turning direction "right"
+	move the train at the point (center.x-cos(angle),center.y-sin(angle))
+	angle-=pi/2
+if "right" and turning direction "left"
+	move the center of turning at the point (train.x-sin(angle),train.y+cos(angle))
+	move the train at the point (train.x+cos(angle),center.y-+sin(angle))
+	angle+=pi/2
+
+Destroy the object if its last wagon on the end point

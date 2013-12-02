@@ -1,0 +1,14 @@
+Algorithm of train creation
+
+Take number of wagons as input parameter (or make it random way)
+Choose start point or end point of the road.
+Take the direction from the tile "East","West","North","South" (equal to trigonometrical pi, 0, pi/2,3*pi/2)
+Beginning tile always straight.
+
+Train consist of two type of objects "train" and "wagon"
+
+Run the creation function with chosen point
+Place tre train object on this point
+Run the creation function with new coordinates follow the formula (x-cos(direction),y-sin(direction))
+Place every wagon as a child of previos object
+Break the function when all wagons appear
