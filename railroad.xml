@@ -47,27 +47,34 @@ turn switch places.
 
 Using the map above let's make an xml description
 -->
-
-<Railroad Width="10" Heigth="5" TileMode="Square" TileDimension="2">
-  <Track StartPositionX="4" StartPositionY="3" Direction="East">
-    <Tile ID="1" Turn="Straight" TileType="Single"/>
-    <Tile ID="2" Turn="Left" 	 TileType="Single"/>
-    <Tile ID="3" Turn="Straight" TileType="Cross"/>
-  </Track>
-  <Track StartPositionX="5" StartPositionY="4" Direction="East">
-    <Tile ID="1" Turn="Straight" TileType="Single"/>
-    <Tile ID="2" Turn="Straight" TileType="Cross"/>
-    <Tile ID="3" Turn="Right" 	 TileType="Single"/>
-    <Tile ID="4" Turn="Straight" TileType="Single"/>
-    <Tile ID="5" Turn="Straight" TileType="LeftSwitch"/>
-    <Tile ID="5" Turn="Straight" TileType="Single">
-  </Track>
-  <Track StartPositionX="5" StartPositionY="4" Direction="East">
-    <Tile ID="1" Turn="Straight" TileType="Single"/>
-    <Tile ID="2" Turn="Straight" TileType="Cross"/>
-    <Tile ID="3" Turn="Right" 	 TileType="Single"/>
-    <Tile ID="4" Turn="Straight" TileType="Single"/>
-    <Tile ID="5" Turn="Left" 	   TileType="LeftSwitch"/>
-    <Tile ID="5" Turn="Straight" TileType="Single">
-  </Track>
-</Railroad>
+<levels>
+   <level>
+	<name>Level 1</name>
+	     <Railroad Width="10" Heigth="5" TileMode="Square" TileDimension="2">
+  		 <Track StartPositionX="4" StartPositionY="3" Direction="East">
+    			<Tile ID="1" Turn="Straight" TileType="Single"/>
+    			<Tile ID="2" Turn="Left"     TileType="Single"/>
+   			<Tile ID="3" Turn="Straight" TileType="Cross"/>
+  		</Track>
+  		<Track StartPositionX="5" StartPositionY="4" Direction="East">
+    			<Tile ID="1" Turn="Straight" TileType="Single"/>
+    			<Tile ID="2" Turn="Straight" TileType="Cross"/>
+    			<Tile ID="3" Turn="Right"    TileType="Single"/>
+   			<Tile ID="4" Turn="Straight" TileType="Single"/>
+    			<Tile ID="5" Turn="Straight" TileType="LeftSwitch"/>
+    			<Tile ID="5" Turn="Straight" TileType="Single">
+  		</Track>
+  		<Track StartPositionX="5" StartPositionY="4" Direction="East">
+    			<Tile ID="1" Turn="Straight" TileType="Single"/>
+    			<Tile ID="2" Turn="Straight" TileType="Cross"/>
+    			<Tile ID="3" Turn="Right"    TileType="Single"/>
+    			<Tile ID="4" Turn="Straight" TileType="Single"/>
+    			<Tile ID="5" Turn="Left"     TileType="LeftSwitch"/>
+    			<Tile ID="5" Turn="Straight" TileType="Single">
+  		</Track>
+	    </Railroad>
+  </level>
+  <level>
+	<name>Level 2</name>
+  </level>
+</levels>
