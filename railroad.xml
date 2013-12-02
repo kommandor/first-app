@@ -45,7 +45,7 @@ Ending points are on the east wall and on the north wall
 if train appeares on ending point and goes to star point "left" and "right"
 turn switch places.
 
-Using the map below let's make an xml description
+Using the map above let's make an xml description
 -->
 
 <Railroad Width="10" Heigth="5" TileMode="Square" TileDimension="2">
