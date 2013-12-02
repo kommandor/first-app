@@ -30,3 +30,44 @@ the example below describes following map:
     <Tile ID="2" Direction="NorthEast"/>
   </Track>
 </Railroad>
+
+
+<!--
+
+left lowest corner is the beginning point (0,0)
+Direction: "North","East","South","West"
+Turns: "Left","Straight","Right"
+
+Tile types: "LeftStraightSwitch","Cross","RightStraightSwitch","LeftRightSwitch","single"
+Beginning points are on the west wall and on the south wall
+Ending points are on the east wall and on the north wall
+
+if train appeares on ending point and goes to star point "left" and "right"
+turn switch places.
+
+Using the map below let's make an xml description
+-->
+
+<Railroad Width="10" Heigth="5" TileMode="Square" TileDimension="2">
+  <Track StartPositionX="4" StartPositionY="2" Direction="East">
+    <Tile ID="1" Turn="Straight" TileType="Single"/>
+    <Tile ID="2" Turn="Left" 	 TileType="Single"/>
+    <Tile ID="3" Turn="Straight" TileType="Cross"/>
+  </Track>
+  <Track StartPositionX="5" StartPositionY="1" Direction="East">
+    <Tile ID="1" Turn="Straight" TileType="Single"/>
+    <Tile ID="2" Turn="Straight" TileType="Cross"/>
+    <Tile ID="3" Turn="Right" 	 TileType="Single"/>
+    <Tile ID="4" Turn="Straight" TileType="Single"/>
+    <Tile ID="5" Turn="Straight" TileType="LeftSwitch"/>
+    <Tile ID="5" Turn="Straight" TileType="Single">
+  </Track>
+  <Track StartPositionX="5" StartPositionY="1" Direction="East">
+    <Tile ID="1" Turn="Straight" TileType="Single"/>
+    <Tile ID="2" Turn="Straight" TileType="Cross"/>
+    <Tile ID="3" Turn="Right" 	 TileType="Single"/>
+    <Tile ID="4" Turn="Straight" TileType="Single"/>
+    <Tile ID="5" Turn="Left" 	   TileType="LeftSwitch"/>
+    <Tile ID="5" Turn="Straight" TileType="Single">
+  </Track>
+</Railroad>
