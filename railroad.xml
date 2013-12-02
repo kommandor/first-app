@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+this is an example how to store railroad data
+possible directions: EastWest, EastSouth, EastNorth... (or more complex for smooth turn: EastEastNorth, EastNorthNorth...)
+all attributes are self-explainable :)
+the example below describes following map:
+
++ - - - - - - - - - - +
+|         --|--\      |
+|       ---/   |      |
+|              |\     |
+|              | \    |
++ - - - - - - - - - - +
+-->
+<Railroad Width="10" Heigth="5" TileMode="Square" TileDimension="2">
+  <Track StartPositionX="4" StartPositionY="2">
+    <Tile ID="1" Direction="WestEast"/>
+    <Tile ID="2" Direction="WestNorth"/>
+    <Tile ID="3" Direction="SothNorth" IntersectionType="Cross"/>
+  </Track>
+  <Track StartPositionX="5" StartPositionY="1">
+    <Tile ID="1" Direction="WestEast"/>
+    <Tile ID="2" Direction="WestEast" IntersectionType="Cross"/>
+    <Tile ID="3" Direction="WestSouth"/>
+    <Tile ID="4" Direction="NorthSouth"/>
+    <Tile ID="5" Direction="NorthSouth" IntersectionType="Switch"/>
+  </Track>
+  <Track StartPositionX="7" StartPositionY="3">
+    <Tile ID="1" Direction="NorthEast" IntersectionType="Switch"/>
+    <Tile ID="2" Direction="NorthEast"/>
+  </Track>
+</Railroad>
